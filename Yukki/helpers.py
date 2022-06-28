@@ -109,21 +109,21 @@ RANDOM = [
 ]
 
 
-HELP_TEXT = f"""Welcome to {botname}'s Help Section.
+HELP_TEXT = f"""مرحبا بك لـ {botname}مركز المساعدة.
 
-- When someone mentions you in a chat, the user will be notified you are AFK. You can even provide a reason for going AFK, which will be provided to the user as well.
-
-
-/afk - This will set you offline.
-
-/afk [Reason] - This will set you offline with a reason.
-
-/afk [Replied to a Sticker/Photo] - This will set you offline with an image or sticker.
-
-/afk [Replied to a Sticker/Photo] [Reason] - This will set you afk with an image and reason both.
+- عندما يذكرك شخص ما في محادثة ، سيتم إعلام المستخدم بأنك في وضع عدم الاتصال . يمكنك أيضًا تقديم سبب لعدم اتصالك ، والذي سيتم توفيره للمستخدم أيضًا.
 
 
-/settings - To change or edit basic settings of AFK Bot.
+/AFK - سيؤدي ذلك إلى وضعك في وضع عدم الاتصال.
+
+/afk [سبب] - سيؤدي ذلك إلى وضعك في وضع عدم الاتصال لسبب ما.
+
+/ afk [رد على ملصق / صورة] - سيؤدي هذا إلى تعيينك في وضع عدم الاتصال بصورة أو ملصق.
+
+/afk [تم الرد على ملصق / صورة] [السبب] - هذا سوف يجعلك غير متصل مع ارسال صورة معينه وكتابة السبب
+
+
+/setting - لتغيير أو تعديل الإعدادات الأساسية للبوت.‌‌
 """
 
 def settings_markup(status: Union[bool, str] = None):
@@ -131,7 +131,7 @@ def settings_markup(status: Union[bool, str] = None):
         [
             InlineKeyboardButton(text="🔄 Clean Mode", callback_data="cleanmode_answer"),
             InlineKeyboardButton(
-                text="✅ Enabled" if status == True else "❌ Disabled",
+                text="✅ تفعيل" if status == True else "❌ تعطيل",
                 callback_data="CLEANMODE",
             ),
         ],
