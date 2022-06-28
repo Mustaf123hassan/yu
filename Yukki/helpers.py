@@ -131,7 +131,7 @@ def settings_markup(status: Union[bool, str] = None):
         [
             InlineKeyboardButton(text="🔄 Clean Mode", callback_data="cleanmode_answer"),
             InlineKeyboardButton(
-                text="✅ Enabled" if status == True else "❌ Disabled",
+                text="✅ تفعيل" if status == True else "❌ تعطيل",
                 callback_data="CLEANMODE",
             ),
         ],
