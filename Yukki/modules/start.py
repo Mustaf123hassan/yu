@@ -28,11 +28,11 @@ async def on_start(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="📜 Help Section",
+                    text="📜 مركز المساعدة",
                     url=f"https://t.me/{botusername}?start=help",
                 ),
                 InlineKeyboardButton(
-                    text="🔧 Settings",
+                    text="🔧 الاعدادات",
                     callback_data="settings_callback",
                 ),
             ]
@@ -49,7 +49,7 @@ async def on_help(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="📜 Help Section",
+                    text="📜 مركز المساعدة",
                     url=f"https://t.me/{botusername}?start=help",
                 ),
             ]
@@ -71,7 +71,7 @@ async def on_private_start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="➕ Add me to a Group",
+                        text="➕ اضفني لمجموعتك",
                         url=f"https://t.me/{botusername}?startgroup=true",
                     ),
                 ]
@@ -91,7 +91,7 @@ async def on_close_button(client, CallbackQuery):
 
 @app.on_callback_query(filters.regex("cleanmode_answer"))
 async def on_cleanmode_button(client, CallbackQuery):
-    await CallbackQuery.answer("⁉️ What is This?\n\nWhen activated, Bot will delete its message after 5 Mins to make your chat clean and clear.", show_alert=True)
+    await CallbackQuery.answer("⁉️ ما هذا\n\nعند تفعيلها سيقوم البوت بحذف اوامره بعد خمس دقائق للمحافظة على مجموعتك نظيفة .", show_alert=True)
 
 @app.on_callback_query(filters.regex("settings_callback"))
 async def on_settings_button(client, CallbackQuery):
