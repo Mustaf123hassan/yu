@@ -19,15 +19,15 @@ async def is_cleanmode_on(chat_id: int) -> bool:
     if not mode:
         user = await cleandb.find_one({"chat_id": chat_id})
         if not user:
-            cleanmode[chat_id] = True
-            return True
-        cleanmode[chat_id] = False
-        return False
+            cleanmode[chat_id] = False
+            return False
+        cleanmode[chat_id] = True
+        return True
     return mode
 
 
 async def cleanmode_on(chat_id: int):
-    cleanmode[chat_id] = True
+    cleanmode[chat_id] = False
     user = await cleandb.find_one({"chat_id": chat_id})
     if user:
         return await cleandb.delete_one({"chat_id": chat_id})
