@@ -98,7 +98,7 @@ async def on_settings_button(client, CallbackQuery):
     await CallbackQuery.answer()
     status = await is_cleanmode_on(CallbackQuery.message.chat.id)
     buttons = settings_markup(status)
-    return await CallbackQuery.edit_message_text(f"⚙️ **AFK Bot Settings**\n\n🖇**Group:** {CallbackQuery.message.chat.title}\n🔖**Group ID:** `{CallbackQuery.message.chat.id}`\n\n💡**Choose the function buttons from below which you want to edit or change.**", reply_markup=InlineKeyboardMarkup(buttons),)
+    return await CallbackQuery.edit_message_text(f"⚙️ **اعدادات البوت**\n\n🖇**المجموعة:** {CallbackQuery.message.chat.title}\n🔖**ايدي المجموعة:** `{CallbackQuery.message.chat.id}`\n\n💡**اختر الزر الذي تريد تعديله من الاسفل .**", reply_markup=InlineKeyboardMarkup(buttons),)
 
 @app.on_callback_query(filters.regex("CLEANMODE"))
 async def on_cleanmode_change(client, CallbackQuery):
@@ -106,7 +106,7 @@ async def on_cleanmode_change(client, CallbackQuery):
     if admin.status in ["creator", "administrator"]:
         pass
     else:
-        return await CallbackQuery.answer("Only Admins can perform this action.", show_alert=True)
+        return await CallbackQuery.answer("المشرفين فقط من يمكنهم التحمم بهذا الاعداد.", show_alert=True)
     await CallbackQuery.answer()
     status = None
     if await is_cleanmode_on(CallbackQuery.message.chat.id):
