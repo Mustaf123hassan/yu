@@ -39,7 +39,7 @@ async def on_start(_, message: Message):
         ]
     )
     image = random.choice(RANDOM)
-    send = await message.reply_photo(image, caption=f"Hello! My name is {botname}.\n\nTo know more about me check help section. Active since {Uptime}", reply_markup=upl)
+    send = await message.reply_photo(image, caption=f"هلو عيني .اسمي  {botname}.\n\n لمعرفة المزيد عني تحقق من قسم المساعدة. نشط منذ {Uptime}", reply_markup=upl)
     await put_cleanmode(message.chat.id, send.message_id)
     
 
@@ -78,7 +78,7 @@ async def on_private_start(_, message: Message):
             ]
         )
         image = random.choice(RANDOM)
-        await message.reply_photo(image, caption=f"Hello! My name is {botname}.\n\nTo know more about me check help section by /help. Active since {Uptime}", reply_markup=upl)
+        await message.reply_photo(image, caption=f"هلو عيني .اسمي  {botname}.\n\n معرفة المزيد عني تحقق من قسم المساعدة. نشط منذ {Uptime}", reply_markup=upl)
 
 @app.on_message(filters.command(["help"]) & filters.private & ~filters.edited)
 async def on_private_help(_, message: Message):
