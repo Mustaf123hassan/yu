@@ -34,35 +34,35 @@ async def active_afk(_, message: Message):
             seenago = get_readable_time((int(time.time() - timeafk)))
             if afktype == "text":
                 send = await message.reply_text(
-                    f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا عن \n {seenago}",
+                    f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا  {seenago}",
                     disable_web_page_preview=True,
                 )
             if afktype == "text_reason":
                 send = await message.reply_text(
-                    f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا عن {seenago}\n\n سبب: `{reasonafk}`",
+                    f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا  {seenago}\n\n السبب: `{reasonafk}`",
                     disable_web_page_preview=True,
                 )
             if afktype == "animation":
                 if str(reasonafk) == "None":
                     send =  await message.reply_animation(
                         data,
-                        caption=f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا عن \n {seenago}",
+                        caption=f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا  {seenago}",
                     )
                 else:
                     send = await message.reply_animation(
                         data,
-                        caption=f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا عن \n {seenago}\n\nسبب: `{reasonafk}",
+                        caption=f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا  {seenago}\n\nالسبب: `{reasonafk}",
                     )
             if afktype == "photo":
                 if str(reasonafk) == "None":
                     send = await message.reply_photo(
                         photo=f"downloads/{user_id}.jpg",
-                        caption=f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا عن \n {seenago}",
+                        caption=f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا  {seenago}",
                     )
                 else:
                     send = await message.reply_photo(
                         photo=f"downloads/{user_id}.jpg",
-                        caption=f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا عن \n {seenago} \n\n سبب: `{reasonafk}`",
+                        caption=f"**{message.from_user.first_name}** عاد للاتصال بالإنترنت وكان بعيدًا  {seenago}\n\n السبب: `{reasonafk}`",
                     )
         except Exception as e:
             send =  await message.reply_text(
@@ -181,6 +181,6 @@ async def active_afk(_, message: Message):
 
     await add_afk(user_id, details)
     send = await message.reply_text(
-        f"{message.from_user.first_name} غير متصل الآن"
+        f"{message.from_user.first_name} غير متصل الآن!"
     )
     await put_cleanmode(message.chat.id, send.message_id)
