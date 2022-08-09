@@ -39,20 +39,9 @@ async def on_start(_, message: Message):
             ]
         ]
     )
-    up = InlineKeyboardMarkup(
-        [
-            [
-                 
-               
-                InlineKeyboardButton(
-                    text=" المطور ",
-                    url=f"https://t.me/ov_tr",
-                ),
-            ]
-        ]
-    )
+    
     image = random.choice(RANDOM)
-    send = await message.reply_photo(image, caption=f"هلو عيني اسمي  {botname} \n\n لمعرفة المزيد عني تحقق من قسم المساعدة. نشط منذ {Uptime}", reply_markup=upl, reply_markup=up)
+    send = await message.reply_photo(image, caption=f"هلو عيني اسمي  {botname} \n\n لمعرفة المزيد عني تحقق من قسم المساعدة. نشط منذ {Uptime}", reply_markup=upl)
     await put_cleanmode(message.chat.id, send.message_id)
     
 
