@@ -82,15 +82,15 @@ RANDOM = [
     "https://te.legra.ph/file/867f5a8e6975a7b2c5a3a.jpg",
     "https://te.legra.ph/file/cb0b3217cd19e7ebf1243.jpg",
     "https://te.legra.ph/file/867f5a8e6975a7b2c5a3a.jpg",
-    "https://telegra.ph//file/3b59b15e1914b4fa18b71.jpg",
-    "https://telegra.ph//file/efb26cc17eef6fe82d910.jpg",
+    "https://te.legra.ph/file/4e9078ed511142e3c7ffc.jpg",
+    "https://te.legra.ph/file/4e9078ed511142e3c7ffc.jpg",
     "https://telegra.ph//file/ab4925a050e07b00f63c5.jpg",
-    "https://telegra.ph//file/d169a77fd52b46e421414.jpg",
-    "https://telegra.ph//file/dab9fc41f214f9cded1bb.jpg",
-    "https://telegra.ph//file/e05d6e4faff7497c5ae56.jpg",
-    "https://telegra.ph//file/1e54f0fff666dd53da66f.jpg",
-    "https://telegra.ph//file/18e98c60b253d4d926f5f.jpg",
-    "https://telegra.ph//file/b1f7d9702f8ea590b2e0c.jpg"
+    "https://te.legra.ph/file/4e9078ed511142e3c7ffc.jpg",
+    "https://te.legra.ph/file/641fca56ee105c1c4d83f.jpg",
+    "https://te.legra.ph/file/b3d64e3c40cf3695229db.jpg",
+    "https://te.legra.ph/file/734e09e30540b8f1318aa.jpg",
+    "https://te.legra.ph/file/4e9078ed511142e3c7ffc.jpg",
+    "https://te.legra.ph/file/4e9078ed511142e3c7ffc.jpg"
 ]
 
 
