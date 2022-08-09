@@ -31,13 +31,22 @@ async def on_start(_, message: Message):
                     text="📜 مركز المساعدة",
                     url=f"https://t.me/{botusername}?start=help",
                 ),
-                InlineKeyboardButton(
-                    text="المطور ",
-                    url=f"https://t.me/ov_tr",
-                ),
+               
                 InlineKeyboardButton(
                     text="🔧 الاعدادات",
                     callback_data="settings_callback",
+                ),
+            ]
+        ]
+    )
+    upl = InlineKeyboardMarkup(
+        [
+            [
+                 
+               
+                InlineKeyboardButton(
+                    text=" المطور ",
+                    url=f"https://t.me/ov_tr",
                 ),
             ]
         ]
