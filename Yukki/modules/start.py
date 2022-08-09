@@ -39,7 +39,7 @@ async def on_start(_, message: Message):
             ]
         ]
     )
-    upl = InlineKeyboardMarkup(
+    up = InlineKeyboardMarkup(
         [
             [
                  
@@ -68,7 +68,7 @@ async def on_help(_, message: Message):
             ]
         ]
     )
-    send = await message.reply_text("Contact me in PM for help.", reply_markup=upl)
+    send = await message.reply_text("Contact me in PM for help.", reply_markup=upl , reply_markup=up)
     await put_cleanmode(message.chat.id, send.message_id)
 
 @app.on_message(filters.command(["start"]) & filters.private & ~filters.edited)
