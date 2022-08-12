@@ -39,13 +39,15 @@ async def on_start(_, message: Message):
             ]
         ]
     )
-    
+    upl = types.InlineKeyboardMarkup()
+    b1 = types.InlineKeyboardButton(text='المطور', url='https://t.me/ov_tr')
+    upl.add(b1)
     image = random.choice(RANDOM)
     send = await message.reply_photo(image, caption=f"هلو عيني اسمي  {botname} \n\n لمعرفة المزيد عني تحقق من قسم المساعدة. نشط منذ {Uptime}", reply_markup=upl)
     await put_cleanmode(message.chat.id, send.message_id)
     
 
-@app.on_message(filters.command(["help"]) & filters.group & ~filters.edited)
+@app.on_message(filters.command(["help", "المساعدة"]) & filters.group & ~filters.edited)
 async def on_help(_, message: Message):
     upl = InlineKeyboardMarkup(
         [
